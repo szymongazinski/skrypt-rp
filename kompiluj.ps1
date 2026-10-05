@@ -4,7 +4,8 @@ $projectRoot = $PSScriptRoot
 $buildDir = Join-Path $projectRoot 'build'
 $latexDir = Join-Path $projectRoot 'latex'
 $graphicsDir = Join-Path $projectRoot 'grafika'
-$latestPdf = Join-Path $projectRoot 'Rachunek-prawdopodobienstwa.pdf'
+$repositoryPdf = Join-Path $projectRoot 'Rachunek-prawdopodobienstwa.pdf'
+$latestPdf = Join-Path (Split-Path -Parent $projectRoot) 'Rachunek-prawdopodobienstwa.pdf'
 New-Item -ItemType Directory -Path $buildDir -Force | Out-Null
 
 function Invoke-PdfLatex([string]$SourceFile) {
@@ -34,6 +35,7 @@ $mainLog = Get-Content -LiteralPath (Join-Path $buildDir 'main.log') -Raw
 if ($mainLog -match 'There were undefined references|Rerun to get cross-references right|Label\(s\) may have changed|Overfull \\[hv]box|destination with the same identifier') {
     throw 'PDF wymaga sprawdzenia: nieustalone odsylacze lub przepelnienie skladu. Zobacz build/main.log.'
 }
-Copy-Item -LiteralPath (Join-Path $buildDir 'main.pdf') -Destination $latestPdf -Force
+Copy-Item -LiteralPath (Join-Path $buildDir 'main.pdf') -Destination $repositoryPdf -Force
+Copy-Item -LiteralPath $repositoryPdf -Destination $latestPdf -Force
 Write-Host "Najnowszy PDF: $latestPdf"
 if ($Otworz) { Invoke-Item -LiteralPath $latestPdf }

@@ -1,9 +1,22 @@
 # Rachunek prawdopodobieństwa
 
 Skrypt rozwijany na podstawie odręcznych notatek i zdjęć tablic.
-Aktualny PDF: **[Rachunek-prawdopodobienstwa.pdf](Rachunek-prawdopodobienstwa.pdf)**.
+Najnowszy PDF jest dostępny w katalogu przedmiotu, obok folderu `projekt/`.
+W repozytorium znajduje się też jego
+**[wersjonowana kopia](Rachunek-prawdopodobienstwa.pdf)**.
 
 ## Układ projektu
+
+Katalog `D:\Studia\Semestr 3\Rachunek prawdopodobieństwa` zawiera tylko:
+
+```text
+Rachunek prawdopodobieństwa/
+├── Rachunek-prawdopodobienstwa.pdf
+└── projekt/
+```
+
+Cały kod, materiały, grafika, repozytorium Git oraz pliki robocze
+znajdują się w `projekt/`. Poniższe ścieżki są względem tego folderu:
 
 - `latex/main.tex` - dokument główny i kolejność rozdziałów.
 - `latex/preambula.tex` - pakiety, czcionka, formatowanie i polecenia matematyczne.
@@ -18,18 +31,20 @@ Aktualny PDF: **[Rachunek-prawdopodobienstwa.pdf](Rachunek-prawdopodobienstwa.pd
 
 Wymagany jest `pdflatex` z MiKTeX lub TeX Live dostępny w PATH.
 Na tym komputerze MiKTeX i potrzebne pakiety są już zainstalowane.
-Dwukrotne kliknięcie `kompiluj.cmd` przebuduje rysunki, skrypt i otworzy PDF.
+Dwukrotne kliknięcie `projekt/kompiluj.cmd` przebuduje rysunki, skrypt i otworzy PDF.
 W PowerShell można wykonać:
 
 ```powershell
+cd projekt
 .\kompiluj.ps1
 .\kompiluj.ps1 -Otworz
 ```
 
-Plik w głównym katalogu jest nadpisywany po udanej kompilacji.
+PDF obok folderu `projekt/` jest nadpisywany po udanej kompilacji,
+podobnie jak jego wersjonowana kopia w repozytorium.
 Jeśli kompilacja się nie uda, wcześniejszy PDF pozostaje dostępny.
 W edytorze LaTeX należy budować `latex/main.tex` przez ten skrypt,
-aby zaktualizować również PDF w głównym katalogu.
+aby zaktualizować również PDF w katalogu przedmiotu.
 
 ## Formatowanie
 

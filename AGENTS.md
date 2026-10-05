@@ -1,6 +1,9 @@
 # Zasady rozwijania skryptu
 
-Projekt znajduje się w tym katalogu; dokument główny: `latex/main.tex`.
+Cały projekt, repozytorium Git i pliki robocze znajdują się w podfolderze
+`projekt/`; dokument główny względem tego katalogu: `latex/main.tex`.
+W katalogu nadrzędnym przedmiotu pozostają wyłącznie folder `projekt/`
+i najnowszy `Rachunek-prawdopodobienstwa.pdf`.
 
 - Przepisuj dostarczone notatki i zdjęcia po polsku do odpowiednich rozdziałów.
 - Zachowuj PL Roman 12 pt, klasyczny skład oraz czarne, klikalne odnośniki.
@@ -11,7 +14,8 @@ Projekt znajduje się w tym katalogu; dokument główny: `latex/main.tex`.
   i wyjaśniaj je z użytkownikiem. Nie dopisuj nowych tematów bez materiałów.
 - Po każdej zmianie uruchom `kompiluj.ps1`, sprawdź odnośniki i wygląd PDF-a.
   Najnowszy PDF ma być dostępny jako `Rachunek-prawdopodobienstwa.pdf`
-  w głównym katalogu projektu.
+  w katalogu nadrzędnym, obok folderu `projekt/`. Skrypt kompilacji zapisuje
+  również kopię wewnątrz repozytorium do wersjonowania.
 - Wersjonuj źródła, materiały, grafikę i aktualny PDF. Repozytorium ma być prywatne.
 
 ## EasyShut
