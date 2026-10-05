@@ -4,6 +4,11 @@ Cały projekt, repozytorium Git i pliki robocze znajdują się w podfolderze
 `projekt/`; dokument główny względem tego katalogu: `latex/main.tex`.
 W katalogu nadrzędnym przedmiotu pozostają wyłącznie folder `projekt/`
 i najnowszy `Rachunek-prawdopodobienstwa.pdf`.
+Ten sam układ obowiązuje w głównym katalogu repozytorium na GitHubie.
+Repozytorium obejmuje katalog przedmiotu, a lokalne metadane Git pozostają
+w `projekt/.git` z ustawieniem `core.worktree=../..`.
+Polecenia Git wykonuj z folderu `projekt/` (lub przez `git -C projekt ...`).
+Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
 
 - Przepisuj dostarczone notatki i zdjęcia po polsku do odpowiednich rozdziałów.
 - Zachowuj PL Roman 12 pt, klasyczny skład oraz czarne, klikalne odnośniki.
@@ -14,8 +19,9 @@ i najnowszy `Rachunek-prawdopodobienstwa.pdf`.
   i wyjaśniaj je z użytkownikiem. Nie dopisuj nowych tematów bez materiałów.
 - Po każdej zmianie uruchom `kompiluj.ps1`, sprawdź odnośniki i wygląd PDF-a.
   Najnowszy PDF ma być dostępny jako `Rachunek-prawdopodobienstwa.pdf`
-  w katalogu nadrzędnym, obok folderu `projekt/`. Skrypt kompilacji zapisuje
-  również kopię wewnątrz repozytorium do wersjonowania.
+  w katalogu nadrzędnym, obok folderu `projekt/`. Ten PDF jest wersjonowany
+  bezpośrednio w głównym katalogu repozytorium; nie twórz dodatkowej kopii
+  w folderze `projekt/`.
 - Wersjonuj źródła, materiały, grafikę i aktualny PDF. Repozytorium ma być prywatne.
 
 ## EasyShut
