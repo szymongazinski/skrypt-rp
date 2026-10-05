@@ -1,0 +1,169 @@
+% Źródła: materialy/2026-10-05/notatki.pdf oraz tablica-01, -02, -03.jpeg.
+\chapter{Aksjomatyczna definicja prawdopodobieństwa}
+\label{chap:aksjomaty}
+
+\section{Przestrzeń probabilistyczna}
+\label{sec:przestrzen}
+
+\begin{definicja}
+\emph{Przestrzenią probabilistyczną} nazywamy trójkę
+$(\Omega,\F,\PP)$, gdzie:
+\begin{enumerate}
+  \item $\Omega$ jest niepustym zbiorem, zwanym \emph{przestrzenią
+    stanów elementarnych};
+  \item $\F$ jest rodziną podzbiorów $\Omega$ taką, że:
+    \begin{align*}
+      &\varnothing\in\F,\\
+      &A\in\F\ \Longrightarrow\ A^c\in\F,\\
+      &A_1,A_2,\ldots\in\F\ \Longrightarrow\
+        \bigcup_{n=1}^{\infty}A_n\in\F;
+    \end{align*}
+  \item $\PP\colon\F\to[0,1]$ jest funkcją spełniającą warunki:
+    \begin{align}
+      \PP(\Omega)&=1,\label{eq:normalizacja}\\
+      \PP\!\left(\bigcup_{n=1}^{\infty}A_n\right)
+        &=\sum_{n=1}^{\infty}\PP(A_n),
+        \label{eq:addytywnosc}
+    \end{align}
+    przy czym wzór \eqref{eq:addytywnosc} obowiązuje dla każdej
+    rodziny $A_1,A_2,\ldots\in\F$ zdarzeń parami rozłącznych, czyli
+    $A_i\cap A_j=\varnothing$ dla $i\ne j$.
+\end{enumerate}
+Rodzinę $\F$ nazywamy \emph{$\sigma$-ciałem}, a jej elementy
+\emph{zdarzeniami}. Funkcję $\PP$ nazywamy \emph{prawdopodobieństwem}.
+Warunek \eqref{eq:addytywnosc} to \emph{przeliczalna addytywność}.
+\end{definicja}
+
+\begin{uwaga}
+Przyjmujemy następującą terminologię:
+\begin{enumerate}
+  \item $\omega\in\Omega$ jest stanem elementarnym.
+  \item Zdarzenia $A,B\in\F$ \emph{wykluczają się}, jeżeli
+    $A\cap B=\varnothing$.
+  \item $A^c=\Omega\setminus A$ jest \emph{zdarzeniem przeciwnym}
+    do zdarzenia $A$.
+  \item $\varnothing$ jest \emph{zdarzeniem niemożliwym},
+    a $\Omega$ jest \emph{zdarzeniem pewnym}.
+\end{enumerate}
+\end{uwaga}
+
+\begin{fakt}
+\label{fakt:pusty}
+Prawdopodobieństwo zdarzenia niemożliwego wynosi zero:
+\[
+  \PP(\varnothing)=0.
+\]
+\end{fakt}
+
+\section{Zbiory borelowskie i miara Lebesgue'a}
+\label{sec:borel}
+
+\begin{definicja}
+\emph{$\sigma$-ciałem zbiorów borelowskich} na $\R$
+(odpowiednio na $\R^2$ lub $\R^n$) nazywamy najmniejsze
+$\sigma$-ciało zawierające wszystkie zbiory otwarte.
+Oznaczamy je przez $\B(\R)$ (odpowiednio $\B(\R^2)$ lub $\B(\R^n)$).
+Na prostej wystarczy rozważać otwarte przedziały $(a,b)$.
+Elementy tego $\sigma$-ciała nazywamy \emph{zbiorami borelowskimi}.
+\end{definicja}
+
+Na przestrzeni $(\R,\B(\R))$ istnieje miara $\lambda$ taka, że
+\[
+  \lambda\bigl((a,b)\bigr)=b-a
+  \qquad\text{dla }a<b.
+\]
+Jest to \emph{miara Lebesgue'a}. Mierzy ona długość i spełnia
+warunek przeliczalnej addytywności:
+\[
+  \lambda\!\left(\bigcup_{n=1}^{\infty}A_n\right)
+    =\sum_{n=1}^{\infty}\lambda(A_n)
+\]
+dla zbiorów borelowskich $A_n$ parami rozłącznych.
+
+\begin{fakt}
+\label{fakt:miara-zero}
+Każdy zbiór jednopunktowy ma miarę Lebesgue'a równą zero:
+\[
+  \lambda(\{x\})=0\qquad\text{dla każdego }x\in\R.
+\]
+W szczególności $\lambda(\Q)=0$.
+\end{fakt}
+
+Istotnie, zbiór liczb wymiernych jest przeliczalny. Jeśli
+$\Q=\{q_1,q_2,\ldots\}$, przy czym liczby $q_i$ są różne, to
+\[
+  \lambda(\Q)
+    =\lambda\!\left(\bigcup_{i=1}^{\infty}\{q_i\}\right)
+    =\sum_{i=1}^{\infty}\lambda(\{q_i\})
+    =0.
+\]
+
+\section{Prawdopodobieństwo geometryczne}
+\label{sec:geometryczne}
+
+Niech $\Omega\subseteq\R$ będzie zbiorem borelowskim, dla którego
+$0<\lambda(\Omega)<\infty$. Przyjmujemy
+\[
+  \F=\{A\cap\Omega:A\in\B(\R)\}.
+\]
+Dla każdego $B\in\F$ definiujemy
+\begin{equation}
+  \PP(B)=\frac{\lambda(B)}{\lambda(\Omega)}.
+  \label{eq:geometryczne}
+\end{equation}
+W ten sposób otrzymujemy przestrzeń probabilistyczną
+$(\Omega,\F,\PP)$.
+
+Analogicznie, dla borelowskiego zbioru $\Omega\subseteq\R^2$
+o dodatnim i skończonym polu, prawdopodobieństwo zdarzenia
+$A\in\{B\cap\Omega:B\in\B(\R^2)\}$ określamy wzorem
+\begin{equation}
+  \PP(A)=\frac{\pole(A)}{\pole(\Omega)}.
+  \label{eq:pole}
+\end{equation}
+
+\section{Przykład: suma dwóch losowanych liczb}
+\label{sec:suma}
+
+\begin{przyklad}
+Losujemy niezależnie i jednostajnie dwie liczby z przedziału $[0,1]$.
+Jakie jest prawdopodobieństwo, że ich suma jest większa od $1/2$?
+\end{przyklad}
+
+\noindent\emph{Rozwiązanie.}
+Przestrzenią stanów elementarnych jest kwadrat jednostkowy
+\[
+  \Omega=[0,1]^2=\{(x,y):x,y\in[0,1]\}.
+\]
+Rozważamy zdarzenie
+\[
+  A=\{(x,y)\in[0,1]^2:x+y>\tfrac12\}.
+\]
+Jego dopełnienie $A^c$ jest trójkątem o wierzchołkach
+$(0,0)$, $(1/2,0)$ i $(0,1/2)$, przedstawionym na
+rysunku~\ref{fig:suma}. Stąd
+\[
+  \pole(A^c)=\frac12\cdot\frac12\cdot\frac12=\frac18,
+  \qquad \pole(\Omega)=1.
+\]
+Korzystając ze wzoru \eqref{eq:pole}, otrzymujemy
+\begin{equation}
+  \PP(A)=1-\PP(A^c)
+    =1-\frac{\pole(A^c)}{\pole(\Omega)}
+    =1-\frac18=\boxed{\frac78}.
+  \label{eq:wynik-suma}
+\end{equation}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=7.6cm]{suma-dwoch-liczb.pdf}
+  \caption{Kwadrat $\Omega=[0,1]^2$ oraz zdarzenia
+    $A=\{x+y>1/2\}$ i $A^c=\{x+y\leq1/2\}$.}
+  \label{fig:suma}
+\end{figure}
+
+\begin{uwaga}
+Na tablicy zapisano $x+y\geq1/2$. Odcinek $x+y=1/2$ ma pole
+równe zero, więc zastąpienie znaku $>$ znakiem $\geq$
+nie zmienia wyniku.
+\end{uwaga}
