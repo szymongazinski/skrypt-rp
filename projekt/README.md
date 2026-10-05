@@ -1,9 +1,9 @@
 # Rachunek prawdopodobieństwa
 
 Skrypt rozwijany na podstawie odręcznych notatek i zdjęć tablic.
-Najnowszy PDF jest dostępny w katalogu przedmiotu, obok folderu `projekt/`.
-W repozytorium znajduje się też jego
-**[wersjonowana kopia](Rachunek-prawdopodobienstwa.pdf)**.
+Najnowszy **[PDF](../Rachunek-prawdopodobienstwa.pdf)** jest dostępny
+w katalogu przedmiotu, obok folderu `projekt/`. Ten sam układ obowiązuje
+lokalnie i w głównym katalogu repozytorium na GitHubie.
 
 ## Układ projektu
 
@@ -40,8 +40,8 @@ cd projekt
 .\kompiluj.ps1 -Otworz
 ```
 
-PDF obok folderu `projekt/` jest nadpisywany po udanej kompilacji,
-podobnie jak jego wersjonowana kopia w repozytorium.
+PDF obok folderu `projekt/` jest nadpisywany po udanej kompilacji
+i wersjonowany bezpośrednio w głównym katalogu repozytorium.
 Jeśli kompilacja się nie uda, wcześniejszy PDF pozostaje dostępny.
 W edytorze LaTeX należy budować `latex/main.tex` przez ten skrypt,
 aby zaktualizować również PDF w katalogu przedmiotu.
@@ -62,3 +62,9 @@ Nowe rysunki należy umieszczać w `grafika/`, wstawiać przez
 Po każdej zmianie treści przebuduj dokument, sprawdź PDF i zapisz zmianę
 w Git. Źródła, rysunki, materiały wejściowe i bieżący PDF są wersjonowane;
 pliki tymczasowe nie trafiają do repozytorium.
+
+Lokalne metadane Git są w `projekt/.git`, a katalog roboczy repozytorium
+obejmuje katalog przedmiotu (`core.worktree=../..`). Polecenia Git wykonuj
+z folderu `projekt/`, np. `git -C projekt status` z katalogu przedmiotu.
+Przy zwykłym klonowaniu z GitHub układ plików jest taki sam; Git utworzy
+standardowy ukryty katalog `.git` w katalogu klonu.
