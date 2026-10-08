@@ -20,3 +20,10 @@ Uwagi do transkrypcji:
 - Doprecyzowano niezależne, jednostajne losowanie obu liczb,
   które uzasadnia model pola na kwadracie jednostkowym.
 - Ujednolicono oznaczenia sigma-ciała, zbiorów borelowskich i prawdopodobieństwa.
+
+## Granice wykładów
+
+Obecny komplet materiałów stanowi wykład 1. PDF nie zawiera czerwonej
+falowanej kreski wyznaczającej początek kolejnego wykładu. Nie dodawano
+granic na podstawie zdjęć ani dat plików. Następne początki będą oznaczane
+zgodnie z czerwonymi falowanymi kreskami w nowych materiałach.
