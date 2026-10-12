@@ -20,6 +20,9 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
   Wstawiaj tam `\poczatekwykladu{numer}`; znacznik jest widoczny tylko
   w wersji z chronologią, także w spisie treści. Nie resetuje liczników.
   Nie wyznaczaj nowych granic wyłącznie na podstawie dat plików.
+  Wyraźnie wskazana przez użytkownika granica ma pierwszeństwo przed
+  oznaczeniami w materiałach. Wykład 2 zaczyna się przed dowodem własności 6
+  (ciąg rosnący); wszystkie siedem stwierdzeń należą jeszcze do wykładu 1.
 - Definicje, przykłady, twierdzenia, fakty, lematy, wnioski i uwagi mają osobne
   liczniki ciągłe przez cały rozdział, resetowane wyłącznie przy `\chapter`.
   Sekcje i podsekcje nie resetują liczników. Numer ma postać `rozdział.numer`,
@@ -32,7 +35,9 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
 - Po każdej zmianie uruchom `kompiluj.ps1`, sprawdź odnośniki i wygląd PDF-a.
   Oba najnowsze PDF-y mają być dostępne obok folderu `projekt/` i wersjonowane
   w głównym katalogu repozytorium. Nie twórz dodatkowych kopii w projekcie.
-- Wersjonuj źródła, materiały, grafikę i aktualny PDF. Repozytorium ma być prywatne.
+- Wersjonuj źródła, materiały, grafikę i aktualne PDF-y. Repozytorium ma być publiczne
+  (najnowsze wyraźne polecenie użytkownika). Repozytorium na GitHubie:
+  `https://github.com/szymongazinski/skrypt-rp`.
 
 ## EasyShut
 
