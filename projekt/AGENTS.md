@@ -38,6 +38,9 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
 - Wersjonuj źródła, materiały, grafikę i aktualne PDF-y. Repozytorium ma być publiczne
   (najnowsze wyraźne polecenie użytkownika). Repozytorium na GitHubie:
   `https://github.com/szymongazinski/skrypt-rp`.
+- Stosuj wyłącznie oficjalne, krótkie komunikaty commitów w formie bezosobowej:
+  `dodano wykład N` przy dodaniu wykładu, a `Poprawki stylistyczne` przy
+  pozostałych zmianach. Nie dodawaj rozwinięcia ani szczegółowych opisów.
 
 ## EasyShut
 
