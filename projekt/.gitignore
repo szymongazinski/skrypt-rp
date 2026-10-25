@@ -1,5 +1,14 @@
 /build/
 /tmp/
+# Niewybrane podglady okladki pozostaja lokalne.
+/grafika/podglady-kreskowka/
+# Poprzednie okladki i fotografie referencyjne nie podlegaja publikacji.
+/grafika/okladka-ilustracja.png
+/grafika/okladka-ilustracja-v2.png
+/grafika/okladka-lebron*
+/grafika/okladka-prompty.txt
+/grafika/okladka-v2-prompt.txt
+/materialy/2026-10-25/
 *.synctex.gz
 *.aux
 *.log

@@ -7,19 +7,7 @@
 \begin{document}
 
 \hypersetup{pageanchor=false}
-\begin{titlepage}
-  \centering
-  {\large Semestr 3\par}
-  \vspace{3cm}
-  {\LARGE\bfseries Rachunek prawdopodobieństwa\par}
-  \vspace{0.6cm}
-  {\large Skrypt z wykładów\par}
-  \ifchronologia
-    \vspace{0.3cm}
-    {\normalsize Z oznaczeniami wykładów\par}
-  \fi
-  \vfill
-\end{titlepage}
+\input{strony/tytulowe}
 
 \pagenumbering{roman}
 \hypersetup{pageanchor=true}
@@ -27,10 +15,11 @@
 \tableofcontents
 \clearpage
 \pagenumbering{arabic}
-\pagestyle{headings}
+\pagestyle{plain}
 
 \input{rozdzialy/01-aksjomaty}
 \input{rozdzialy/01-wlasnosci}
 \input{rozdzialy/02-warunkowe}
+\input{rozdzialy/03-niezaleznosc}
 
 \end{document}

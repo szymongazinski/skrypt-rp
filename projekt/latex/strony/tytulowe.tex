@@ -1,0 +1,31 @@
+% Wspólna okładka; na drugiej stronie informacja właściwa dla wariantu.
+\begin{titlepage}
+  \thispagestyle{empty}
+  \AddToShipoutPictureBG*{%
+    \AtPageLowerLeft{%
+      % Import natywny pdfTeX zachowuje pojedynczą grupę przezroczystości.
+      % Sterownik graphicx dodawał drugą /Group do tej przezroczystej strony.
+      \pdfximage width\paperwidth height\paperheight {../grafika/okladka.pdf}%
+      \pdfrefximage\pdflastximage
+    }%
+  }
+  \null
+\end{titlepage}
+
+\begin{titlepage}
+  \thispagestyle{empty}
+  \centering
+  \vspace*{\fill}
+  \begin{minipage}{\textwidth}
+    \centering
+    \fontsize{17}{25}\selectfont
+    Skrypt do wykładu prof. Jacka Małeckiego\\
+    \ifchronologia
+      z oznaczeniem chronologii wykładu,\\
+    \else
+      bez oznaczenia chronologii wykładu,\\
+    \fi
+    wykonane przez Szymona Gazińskiego
+  \end{minipage}
+  \vspace*{\fill}
+\end{titlepage}

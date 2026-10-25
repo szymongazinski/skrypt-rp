@@ -13,16 +13,43 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
 
 - Przepisuj dostarczone notatki i zdjęcia po polsku do odpowiednich rozdziałów.
 - Zachowuj PL Roman 12 pt, klasyczny skład oraz czarne, klikalne odnośniki.
+- Nie używaj żywej paginy z nazwami rozdziałów. Stosuj `\pagestyle{plain}`:
+  numery stron wyśrodkowane na dole, nagłówki puste.
+- Pierwsza strona to wspólna graficzna okładka `grafika/okladka.pdf`,
+  składana z pliku `grafika/okladka.tex` i kompletnego obrazu
+  `grafika/okladka-kreskowka-3d.png`. Pełny prompt aktywnego wariantu zapisuj
+  w `grafika/okladka-kreskowka-3d-prompt.txt`.
+  Na drugiej stronie podaj prowadzącego prof. Jacka Małeckiego oraz autora
+  Szymona Gazińskiego i dopasuj informację o chronologii do wariantu PDF.
+  Dopiero po obu tych stronach umieszczaj spis treści.
+  Okładka ma typografię wpisaną w kasynowy plakat: wygięty „Rachunek” nad ruletką
+  i „prawdopodobieństwa” pod nią. Nie dodawaj prostokątnych pól na napisy ani
+  osobnej fotograficznej wyciętej głowy. Użytkownik wybrał wariant 2, czyli
+  w całości kreskówkową okładkę w stylu 3D. Obaj jasnoskórzy krupierzy mają
+  być bez zarostu i okularów, z krótszą fryzurą ułożoną na bok i zmienioną
+  linią włosów; oczy mają patrzeć prosto na widza, bez zeza. Kreskówkowa
+  ciemnoskóra głowa w czapce pozostaje brodata i jest częścią całego obrazu.
+  Zachowuj trzy czarne i cztery białe kule oraz czytelne cyfry 6 i 7.
+  Starszych ilustracji, fotografii i masek głowy nie dodawaj do repozytorium
+  ani jego historii. Lokalna kopia tych materiałów jest poza publikowanymi
+  plikami, w prywatnym archiwum wewnątrz metadanych Git.
+  Niewybrane podglądy pozostawiaj lokalnie
+  w ignorowanym katalogu `grafika/podglady-kreskowka/`.
 - Nie umieszczaj w skrypcie informacji o dacie otrzymania materiałów.
 - Utrzymuj oba PDF-y z jednej wspólnej treści. Wersję z chronologią buduje
   `latex/main-wyklady.tex`, zwykłą wersję buduje `latex/main.tex`.
-- Czerwona falowana kreska w notatkach oznacza początek kolejnego wykładu.
-  Wstawiaj tam `\poczatekwykladu{numer}`; znacznik jest widoczny tylko
+- Granice wykładów ustalaj według poleceń użytkownika. Czerwona falowana
+  kreska może oznaczać początek wykładu albo przerwę w notatkach, np. miejsce
+  pominiętego przykładu, definicji lub twierdzenia. Nie traktuj jej automatycznie
+  jako granicy wykładów. W ustalonym miejscu wstawiaj `\poczatekwykladu{numer}`;
+  znacznik jest widoczny tylko
   w wersji z chronologią, także w spisie treści. Nie resetuje liczników.
   Nie wyznaczaj nowych granic wyłącznie na podstawie dat plików.
   Wyraźnie wskazana przez użytkownika granica ma pierwszeństwo przed
   oznaczeniami w materiałach. Wykład 2 zaczyna się przed dowodem własności 6
   (ciąg rosnący); wszystkie siedem stwierdzeń należą jeszcze do wykładu 1.
+  Wykład 3 zaczyna się od początku notatek o niezależności, przed definicją
+  niezależności dwóch zdarzeń. Kreska na zrzucie z tego wykładu oznacza przerwę.
 - Definicje, przykłady, twierdzenia, fakty, lematy, wnioski i uwagi mają osobne
   liczniki ciągłe przez cały rozdział, resetowane wyłącznie przy `\chapter`.
   Sekcje i podsekcje nie resetują liczników. Numer ma postać `rozdział.numer`,
@@ -35,8 +62,11 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
 - Po każdej zmianie uruchom `kompiluj.ps1`, sprawdź odnośniki i wygląd PDF-a.
   Oba najnowsze PDF-y mają być dostępne obok folderu `projekt/` i wersjonowane
   w głównym katalogu repozytorium. Nie twórz dodatkowych kopii w projekcie.
-- Wersjonuj źródła, materiały, grafikę i aktualne PDF-y. Repozytorium ma być publiczne
-  (najnowsze wyraźne polecenie użytkownika). Repozytorium na GitHubie:
+- Wersjonuj źródła wykładów, materiały dydaktyczne, bieżącą grafikę i aktualne
+  PDF-y. Użytkownik polecił udostępnić repozytorium publicznie pod warunkiem,
+  że poprzednie okładki i ich fotografie nie będą dostępne w plikach ani historii.
+  Nie zmieniaj widoczności na publiczną, dopóki ten warunek nie jest sprawdzony.
+  Repozytorium na GitHubie:
   `https://github.com/szymongazinski/skrypt-rp`.
 - Stosuj wyłącznie oficjalne, krótkie komunikaty commitów w formie bezosobowej:
   `dodano wykład N` przy dodaniu wykładu, a `Poprawki stylistyczne` przy
