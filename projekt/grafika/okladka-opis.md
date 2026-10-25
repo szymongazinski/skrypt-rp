@@ -13,7 +13,11 @@ Aktywne pliki:
 Zwiększone podpisy są częścią kasynowego plakatu; nie mają prostokątnych pól.
 Obaj jasnoskórzy krupierzy mają gładkie twarze bez zarostu i okularów,
 krótsze włosy ułożone na bok oraz zmienioną linię włosów. Ich oczy patrzą
-prosto na widza, bez zeza. W urnie są trzy czarne i cztery białe kule,
+prosto na widza; położenie tęczówki prawego oka głównej postaci poprawiono
+na podstawie osobno edytowanego zbliżenia. Zachowano wybrany przez użytkownika
+umiarkowany uśmiech. Jedyny złoty ząb to boczny górny kieł (trójka), a cztery
+przednie siekacze pozostają białe. Mniejszy krupier ma spokojny, zamknięty
+uśmiech bez wystawionego języka. W urnie są trzy czarne i cztery białe kule,
 a mniejszy krupier trzyma czytelne cyfry 6 i 7. Kreskówkowa ciemnoskóra głowa
 w czapce zachowuje brodę. Jest wkomponowana w kompletny obraz, bez osobnej
 fotograficznej nakładki.

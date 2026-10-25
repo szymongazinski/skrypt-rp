@@ -27,7 +27,12 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
   osobnej fotograficznej wyciętej głowy. Użytkownik wybrał wariant 2, czyli
   w całości kreskówkową okładkę w stylu 3D. Obaj jasnoskórzy krupierzy mają
   być bez zarostu i okularów, z krótszą fryzurą ułożoną na bok i zmienioną
-  linią włosów; oczy mają patrzeć prosto na widza, bez zeza. Kreskówkowa
+  linią włosów; oczy mają patrzeć prosto na widza, bez zeza.
+  Zachowaj umiarkowany uśmiech wybrany przez użytkownika; nie zastępuj go
+  neutralnymi ustami ani sennymi, przymkniętymi oczami. Tęczówka oka po prawej
+  stronie obrazu ma być odsunięta od nosa i ustawiona we właściwym miejscu.
+  Jedyny złoty ząb to górny kieł (trójka), a cztery przednie siekacze są białe.
+  Kreskówkowa
   ciemnoskóra głowa w czapce pozostaje brodata i jest częścią całego obrazu.
   Zachowuj trzy czarne i cztery białe kule oraz czytelne cyfry 6 i 7.
   Starszych ilustracji, fotografii i masek głowy nie dodawaj do repozytorium
