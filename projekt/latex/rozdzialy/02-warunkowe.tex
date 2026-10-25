@@ -1,0 +1,289 @@
+% Źródła: materialy/2026-10-12/notatki.pdf i zdjęcia IMG_6917--IMG_6922.
+\chapter{Prawdopodobieństwo warunkowe}
+\label{chap:warunkowe}
+
+\section{Definicja i podstawowe własności}
+\label{sec:warunkowe}
+
+Niech $(\Omega,\F,\PP)$ będzie przestrzenią probabilistyczną.
+
+\begin{definicja}
+\label{def:warunkowe}
+Dla zdarzeń $A,B\in\F$ takich, że $\PP(B)>0$,
+\emph{prawdopodobieństwo warunkowe zdarzenia $A$ pod warunkiem $B$}
+definiujemy wzorem
+\begin{equation}
+  \PP(A\mid B)=\frac{\PP(A\cap B)}{\PP(B)}.
+  \label{eq:warunkowe}
+\end{equation}
+\end{definicja}
+
+\begin{uwaga}
+Przy ustalonym $B\in\F$ o dodatnim prawdopodobieństwie wzór
+\[
+  \PP_B(A)=\PP(A\mid B),\qquad A\in\F,
+\]
+definiuje nowe prawdopodobieństwo na $(\Omega,\F)$.
+\end{uwaga}
+
+\begin{fakt}
+\label{fakt:wlasnosci-warunkowego}
+Niech $A,B\in\F$ oraz $\PP(B)>0$. Wówczas:
+\begin{enumerate}
+  \item jeśli $A\subseteq B$, to
+    \[
+      \PP(A\mid B)=\frac{\PP(A)}{\PP(B)};
+    \]
+  \item jeśli $B\subseteq A$, to $\PP(A\mid B)=1$;
+  \item jeśli $A\cap B=\varnothing$, to $\PP(A\mid B)=0$;
+    ogólniej, wystarczy warunek $\PP(A\cap B)=0$;
+  \item jeśli $C\in\F$ i $\PP(B\cap C)>0$, to
+    \begin{equation}
+      \PP(A\mid B\cap C)
+        =\frac{\PP(A\cap B\mid C)}{\PP(B\mid C)}.
+      \label{eq:warunkowanie-dwukrotne}
+    \end{equation}
+\end{enumerate}
+\end{fakt}
+
+\begin{przyklad}[Rodzina z dwojgiem dzieci]
+\label{przykl:dzieci}
+Wybieramy rodzinę z dwojgiem dzieci. Jakie jest prawdopodobieństwo,
+że ma ona dwóch chłopców, jeśli:
+\begin{enumerate}[label=\alph*)]
+  \item starsze dziecko jest chłopcem;
+  \item w rodzinie jest co najmniej jeden chłopiec?
+\end{enumerate}
+Zakładamy, że płcie dzieci są niezależne, a każda z dwóch płci ma
+prawdopodobieństwo $1/2$.
+\end{przyklad}
+
+\noindent\emph{Rozwiązanie.}
+Kodujemy chłopca przez $0$, a dziewczynkę przez $1$. Pierwsza współrzędna
+odpowiada starszemu dziecku. Cztery stany elementarne
+\[
+  \Omega=\{(0,0),(0,1),(1,0),(1,1)\}
+\]
+są jednakowo prawdopodobne. Przyjmujemy
+\begin{align*}
+  A&=\{(0,0)\},\\
+  B_1&=\{(0,0),(0,1)\},\\
+  B_2&=\{(0,0),(0,1),(1,0)\}.
+\end{align*}
+Ponieważ $A\subseteq B_1$ i $A\subseteq B_2$, otrzymujemy
+\[
+  \PP(A\mid B_1)=\frac{1/4}{1/2}=\frac12,
+  \qquad
+  \PP(A\mid B_2)=\frac{1/4}{3/4}=\frac13.
+\]
+
+\section{Prawdopodobieństwo całkowite}
+\label{sec:calkowite}
+
+\begin{definicja}
+\label{def:rozbicie}
+\emph{Rozbiciem przestrzeni $\Omega$} nazywamy rodzinę zbiorów
+$(B_n)_{n\in I}$, gdzie $I\subseteq\mathbb{N}$ jest zbiorem indeksów,
+taką, że:
+\begin{enumerate}
+  \item $B_n\cap B_m=\varnothing$ dla $n,m\in I$, $n\ne m$;
+  \item $\displaystyle\bigcup_{n\in I}B_n=\Omega$.
+\end{enumerate}
+Rozbicie może być skończone lub przeliczalne.
+\end{definicja}
+
+\begin{twierdzenie}[O prawdopodobieństwie całkowitym]
+\label{tw:calkowite}
+Niech $(B_n)_{n\in I}$ będzie rozbiciem $\Omega$ takim, że
+$B_n\in\F$ i $\PP(B_n)>0$ dla każdego $n\in I$.
+Wówczas dla dowolnego $A\in\F$ zachodzi
+\begin{equation}
+  \PP(A)=\sum_{n\in I}\PP(A\mid B_n)\PP(B_n).
+  \label{eq:calkowite}
+\end{equation}
+\end{twierdzenie}
+
+\begin{proof}
+Zdarzenia $A\cap B_n$ są parami rozłączne. Zatem
+\begin{align*}
+  \PP(A)
+    &=\PP(A\cap\Omega)
+      =\PP\!\left(A\cap\bigcup_{n\in I}B_n\right)\\
+    &=\PP\!\left(\bigcup_{n\in I}(A\cap B_n)\right)
+      =\sum_{n\in I}\PP(A\cap B_n)\\
+    &=\sum_{n\in I}\PP(A\mid B_n)\PP(B_n).
+\end{align*}
+\end{proof}
+
+\begin{przyklad}[Zniszczenie celu]
+\label{przykl:strzaly}
+Prawdopodobieństwo trafienia w cel wynosi $1/2$, a wyniki kolejnych
+strzałów są niezależne. Prawdopodobieństwo zniszczenia celu przy
+dokładnie $k$ celnych strzałach wynosi $1-(1/3)^k$.
+Jakie jest prawdopodobieństwo zniszczenia celu po oddaniu dziesięciu strzałów?
+\end{przyklad}
+
+\noindent\emph{Rozwiązanie.}
+Niech $A$ oznacza zniszczenie celu, a $B_i$ zdarzenie, że dokładnie
+$i$ spośród dziesięciu strzałów jest celnych, gdzie $i=0,1,\ldots,10$.
+Wówczas
+\[
+  \PP(A\mid B_i)=1-\left(\frac13\right)^i,
+  \qquad
+  \PP(B_i)=\binom{10}{i}\left(\frac12\right)^{10}.
+\]
+Korzystając ze wzoru \eqref{eq:calkowite} i ze wzoru dwumianowego
+\[
+  (a+b)^n=\sum_{i=0}^{n}\binom{n}{i}a^ib^{n-i},
+\]
+otrzymujemy
+\begin{align*}
+  \PP(A)
+    &=\sum_{i=0}^{10}\left(1-\left(\frac13\right)^i\right)
+        \binom{10}{i}\left(\frac12\right)^{10}\\
+    &=\sum_{i=0}^{10}\binom{10}{i}\left(\frac12\right)^{10}
+      -\sum_{i=0}^{10}\binom{10}{i}
+        \left(\frac16\right)^i\left(\frac12\right)^{10-i}\\
+    &=1-\left(\frac16+\frac12\right)^{10}
+      =\boxed{1-\left(\frac23\right)^{10}}.
+\end{align*}
+
+\begin{przyklad}[Dwie urny]
+\label{przykl:urny}
+Mamy dwie urny, każda zawiera sto kul. Jedna kula jest biała:
+trafia do pierwszej urny z prawdopodobieństwem $2/3$, a do drugiej
+z prawdopodobieństwem $1/3$. Pozostałe kule są czarne.
+Wykonujemy osiemdziesiąt losowań ze zwracaniem.
+Jak rozdzielić losowania między urny, aby zmaksymalizować
+prawdopodobieństwo wylosowania białej kuli co najmniej raz?
+\end{przyklad}
+
+\noindent\emph{Rozwiązanie.}
+Niech $B_i$ oznacza zdarzenie, że biała kula znajduje się w $i$-tej urnie,
+a $A$ zdarzenie, że zostanie wylosowana co najmniej raz.
+Wykonujemy $k$ losowań z pierwszej urny i $m=80-k$ z drugiej.
+Oznaczmy przez $q=99/100$ prawdopodobieństwo wylosowania czarnej kuli
+z urny zawierającej białą kulę. Wówczas
+\[
+  \PP(A\mid B_1)=1-q^k,
+  \qquad
+  \PP(A\mid B_2)=1-q^{80-k}.
+\]
+Ze wzoru \eqref{eq:calkowite} otrzymujemy
+\begin{equation}
+  \PP(A)=f(k)=\frac23(1-q^k)+\frac13(1-q^{80-k}),
+  \qquad k\in\{0,1,\ldots,80\}.
+  \label{eq:urny-funkcja}
+\end{equation}
+Aby znaleźć maksimum, rozważamy najpierw zmienną rzeczywistą $x\in[0,80]$.
+Liczymy
+\[
+  f'(x)=\frac{\ln q}{3}\bigl(q^{80-x}-2q^x\bigr).
+\]
+Warunek $f'(x)=0$ jest równoważny
+\[
+  q^{80-2x}=2,
+  \qquad
+  x=\frac12\left(80-\frac{\ln2}{\ln q}\right)\approx74{,}484.
+\]
+Ponieważ
+\[
+  f''(x)=-\frac{(\ln q)^2}{3}\bigl(q^{80-x}+2q^x\bigr)<0,
+\]
+jest to jedyny punkt maksimum. Dla całkowitej liczby losowań
+porównujemy dwóch kandydatów:
+\[
+  f(74)\approx0{,}3692799222,
+  \qquad f(75)\approx0{,}3692788890.
+\]
+Najlepiej wykonać \emph{74 losowania z pierwszej urny i 6 z drugiej}.
+Oba powyższe prawdopodobieństwa po zaokrągleniu do czterech miejsc
+po przecinku wynoszą $0{,}3693$.
+
+\section{Wzór Bayesa}
+\label{sec:bayes}
+
+\begin{twierdzenie}[Wzór Bayesa]
+\label{tw:bayes}
+Niech $(B_n)_{n\in I}$ będzie rozbiciem $\Omega$ takim, że
+$B_n\in\F$ i $\PP(B_n)>0$ dla każdego $n\in I$.
+Jeżeli $A\in\F$ i $\PP(A)>0$, to dla każdego $n\in I$
+\begin{equation}
+  \PP(B_n\mid A)
+    =\frac{\PP(A\mid B_n)\PP(B_n)}{\PP(A)}
+    =\frac{\PP(A\mid B_n)\PP(B_n)}
+      {\displaystyle\sum_{k\in I}\PP(A\mid B_k)\PP(B_k)}.
+  \label{eq:bayes}
+\end{equation}
+\end{twierdzenie}
+
+\begin{przyklad}[ZONK]
+\label{przykl:zonk}
+Za jedną z trzech bramek znajduje się nagroda, a za pozostałymi dwoma
+zonki. Każda bramka zawiera nagrodę z prawdopodobieństwem $1/3$.
+Wybieramy pierwszą bramkę. Filip Chajzer zna położenie nagrody
+i otwiera jedną z pozostałych bramek, zawsze pokazując zonka.
+Jeżeli może otworzyć obie, wybiera każdą z prawdopodobieństwem $1/2$.
+Chajzer otworzył trzecią bramkę. Jakie jest prawdopodobieństwo,
+że nagroda znajduje się w drugiej bramce? Czy warto zmienić wybór?
+\end{przyklad}
+
+\noindent\emph{Rozwiązanie.}
+Przyjmujemy oznaczenia
+\[
+  A=\{\text{Chajzer otwiera trzecią bramkę}\},
+  \qquad
+  B_i=\{\text{nagroda jest w $i$-tej bramce}\},
+\]
+gdzie $i=1,2,3$. Zdarzenia $B_1,B_2,B_3$ tworzą rozbicie $\Omega$,
+a $\PP(B_i)=1/3$ dla każdego $i$.
+Jeśli nagroda znajduje się w pierwszej bramce, prowadzący ma wybór
+między drugą a trzecią. Jeśli znajduje się w drugiej, musi otworzyć
+trzecią; jeśli w trzeciej, musi otworzyć drugą. Stąd
+\[
+  \PP(A\mid B_1)=\frac12,
+  \qquad \PP(A\mid B_2)=1,
+  \qquad \PP(A\mid B_3)=0.
+\]
+Ze wzoru na prawdopodobieństwo całkowite \eqref{eq:calkowite} mamy
+\[
+  \PP(A)=\frac12\cdot\frac13+1\cdot\frac13+0\cdot\frac13=\frac12.
+\]
+Zatem wzór Bayesa \eqref{eq:bayes} daje
+\begin{equation}
+  \PP(B_2\mid A)
+    =\frac{\PP(A\mid B_2)\PP(B_2)}{\PP(A)}
+    =\frac{1\cdot(1/3)}{1/2}=\boxed{\frac23}.
+  \label{eq:zonk-wynik}
+\end{equation}
+Natomiast $\PP(B_1\mid A)=1/3$. Warto więc zmienić wybór z pierwszej
+bramki na drugą: prawdopodobieństwo wygranej wzrasta z $1/3$ do $2/3$.
+
+\begin{przyklad}[Moneta z dwoma orłami]
+\label{przykl:moneta}
+Mamy sto monet: dziewięćdziesiąt dziewięć uczciwych i jedną
+z orłem na obu stronach. Wybieramy monetę losowo i rzucamy nią dziesięć razy.
+Za każdym razem wypada orzeł. Jakie jest prawdopodobieństwo,
+że wybraliśmy monetę z dwoma orłami?
+\end{przyklad}
+
+\noindent\emph{Rozwiązanie.}
+Niech $A$ oznacza dziesięć orłów, $B_1$ wybór uczciwej monety,
+a $B_2$ wybór monety z dwoma orłami. Wówczas
+\begin{align*}
+  \PP(B_1)&=\frac{99}{100},&
+  \PP(B_2)&=\frac1{100},\\
+  \PP(A\mid B_1)&=\left(\frac12\right)^{10},&
+  \PP(A\mid B_2)&=1.
+\end{align*}
+Prawdopodobieństwo dziesięciu orłów wynosi
+\[
+  \PP(A)=\left(\frac12\right)^{10}\frac{99}{100}+\frac1{100}.
+\]
+Ze wzoru Bayesa \eqref{eq:bayes} otrzymujemy
+\begin{equation}
+  \PP(B_2\mid A)
+    =\frac{1/100}{(1/2)^{10}\cdot99/100+1/100}
+    =\frac{1024}{1123}\approx\boxed{0{,}9118}.
+  \label{eq:moneta-wynik}
+\end{equation}

@@ -6,6 +6,8 @@ i **[z oznaczeniami wykładów](../Rachunek-prawdopodobienstwa-wyklady.pdf)** s�
 w katalogu przedmiotu, obok folderu `projekt/`. Ten sam układ obowiązuje
 lokalnie i w głównym katalogu repozytorium na GitHubie.
 
+Repozytorium jest publiczne: [skrypt-rp](https://github.com/szymongazinski/skrypt-rp).
+
 ## Układ projektu
 
 Katalog `D:\Studia\Semestr 3\Rachunek prawdopodobieństwa` zawiera tylko:
@@ -57,6 +59,9 @@ itd. oraz odpowiadające im wpisy w klikalnym spisie treści. Wariant zwykły
 pomija znaczniki. Czerwona falowana kreska w materiałach wyznacza początek
 kolejnego wykładu. W tym miejscu wstawiaj `\poczatekwykladu{numer}`.
 Znaczniki nie resetują liczników. Nie dodawaj dat materiałów do PDF-a.
+Wyraźnie wskazana przez użytkownika granica ma pierwszeństwo:
+wykład 2 zaczyna się przed dowodem własności 6 (ciąg rosnący),
+a stwierdzenia wszystkich siedmiu własności należą do wykładu 1.
 
 ## Formatowanie
 
