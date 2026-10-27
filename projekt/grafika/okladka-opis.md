@@ -2,34 +2,28 @@
 
 Aktywne pliki:
 
-- `okladka.tex` - skład A4 z kompletnym obrazem kreskówkowym oraz tekstem dostępności.
-- `okladka.pdf` - gotowa wspólna okładka obu wersji skryptu.
-- `okladka-kreskowka-3d.png` - wybrany przez użytkownika wariant 2 w stylu
-  kreskówki 3D, wygenerowany wbudowanym narzędziem imagegen; obejmuje całą
-  ilustrację, postacie i ozdobną typografię.
-- `okladka-kreskowka-3d-prompt.txt` - pełny prompt aktywnego wariantu.
+- `okladka.tex` - edytowalny skład A4, pozycja fotografii i tekst dostępności.
+- `okladka.pdf` - wspólna kompletna okładka obu wersji skryptu.
+- `okladka-realistyczna.png` - baza plakatu z realistycznymi fikcyjnymi krupierami,
+  wygenerowana wbudowanym imagegen; obejmuje kasyno, rekwizyty i całą typografię.
+- `okladka-realistyczna-prompt.txt` - pełny prompt bazy.
+- `lebron-glowa.png` - istniejące wycięcie fotograficzne RGBA ze zdjęcia użytkownika,
+  wykorzystane ponownie bez generowania twarzy. Przezroczystość usuwa prostokątne tło.
+
+Nowsze polecenie użytkownika zastępuje kreskówkowy styl realistycznymi postaciami.
+Obaj krupierzy są dorośli i fikcyjni, bez podobieństwa do prowadzącego, z normalnymi
+proporcjami twarzy, skoordynowanym spojrzeniem oraz pojedynczym złotym górnym kłem.
+Cztery przednie siekacze są białe. Zachowano białe koszule, czarne kamizelki i muchy,
+wyprostowane ręce głównej postaci oraz oparcie dłoni na ruletce.
 
 „Rachunek” jest ozdobnie wygięty nad ruletką, a „prawdopodobieństwa” pod nią.
-Zwiększone podpisy są częścią kasynowego plakatu; nie mają prostokątnych pól.
-Obaj jasnoskórzy krupierzy mają gładkie twarze bez zarostu i okularów,
-krótsze włosy ułożone na bok oraz zmienioną linię włosów. Ich oczy patrzą
-prosto na widza; położenie tęczówki prawego oka głównej postaci poprawiono
-na podstawie osobno edytowanego zbliżenia. Zachowano wybrany przez użytkownika
-umiarkowany uśmiech. Jedyny złoty ząb to boczny górny kieł (trójka), a cztery
-przednie siekacze pozostają białe. Mniejszy krupier ma spokojny, zamknięty
-uśmiech bez wystawionego języka. W urnie są trzy czarne i cztery białe kule,
-a mniejszy krupier trzyma czytelne cyfry 6 i 7. Kreskówkowa ciemnoskóra głowa
-w czapce zachowuje brodę. Jest wkomponowana w kompletny obraz, bez osobnej
-fotograficznej nakładki.
+Napisy są wkomponowane w kasynowy plakat. Pod postacią trzymającą cyfry 6 i 7 jest
+podpis „co ty tam odpierdalasz z tymi rękami?”. W urnie są trzy czarne i cztery białe kule.
+Fotograficzna głowa LeBrona znajduje się nad dolnym prawym cytatem, bez ramki i tła zdjęcia.
 
-Plakat ma zapisany w PDF-ie tekst dostępności odpowiadający widocznym napisom.
-Użytkownik zatwierdził wstawienie wybranego wariantu 2 do projektu i jego
-publikację tylko aktualnej okładki. Niewybrane próby pozostają wyłącznie
-lokalnie w ignorowanym katalogu `podglady-kreskowka/`.
+Imagegen odrzucił generowanie realistycznego LeBrona. Z tego powodu gotowe wycięcie
+zdjęcia umieszczono jako osobny element LaTeX. Baza obrazu pozostawia dla niego wolne miejsce.
+Wszystkie zależności kompletnej okładki znajdują się w `grafika/`.
 
-Poprzednie warianty, fotografie referencyjne i dawne maski nie należą
-do repozytorium ani jego publikowanej historii. Kopię zachowano wyłącznie
-lokalnie, w prywatnym archiwum wewnątrz metadanych Git.
-
-Wszystkie aktywne obrazy znajdują się w `grafika/`, bez zależności
-od katalogów tymczasowych.
+Dawne okładki z fotografią prowadzącego i nieaktywne ilustracje pozostają lokalnie
+w prywatnym archiwum metadanych Git. Nie są potrzebne do kompilacji.

@@ -1,0 +1,266 @@
+% Źródła: materialy/2026-10-27/zmienna-losowa.png i IMG_7006--IMG_7013.jpeg.
+\chapter{Zmienne losowe}
+\label{chap:zmienne-losowe}
+
+\section{Definicja i mierzalność}
+\label{sec:definicja-zmiennej-losowej}
+
+Niech $(\Omega,\F,\PP)$ będzie przestrzenią probabilistyczną.
+
+\begin{definicja}
+\label{def:zmienna-losowa}
+\emph{Zmienną losową o wartościach w $\R$} na przestrzeni
+$(\Omega,\F,\PP)$ nazywamy funkcję $X\colon\Omega\to\R$ taką, że
+\[
+  X^{-1}(A)=\{\omega\in\Omega:X(\omega)\in A\}\in\F
+  \qquad\text{dla każdego }A\in\B(\R).
+\]
+Tutaj $\B(\R)$ oznacza $\sigma$-ciało zbiorów borelowskich prostej.
+\end{definicja}
+
+\begin{uwaga}
+Analogicznie definiujemy zmienną losową $X\colon\Omega\to\R^d$,
+wymagając, aby $X^{-1}(A)\in\F$ dla każdego $A\in\B(\R^d)$.
+Taką zmienną nazywamy \emph{wektorem losowym}.
+\end{uwaga}
+
+\begin{uwaga}
+Zmienna losowa jest funkcją mierzalną.
+\end{uwaga}
+
+\begin{uwaga}
+Aby funkcja $X\colon\Omega\to\R$ była zmienną losową, wystarczy,
+żeby
+\[
+  \{\omega\in\Omega:X(\omega)>a\}\in\F
+  \qquad\text{dla każdego }a\in\R.
+\]
+\end{uwaga}
+
+\begin{uwaga}[Zapis prawdopodobieństw]
+Dla zbioru borelowskiego $A\subseteq\R$ stosujemy skrót
+\[
+  \PP(X\in A)=\PP\bigl(\{\omega\in\Omega:X(\omega)\in A\}\bigr).
+\]
+\end{uwaga}
+
+\begin{uwaga}[Mierzalność funkcji]
+Funkcja $f\colon(E,\mathcal E)\to(S,\mathcal S)$ jest
+\emph{mierzalna}, jeżeli
+\[
+  f^{-1}(A)\in\mathcal E
+  \qquad\text{dla każdego }A\in\mathcal S.
+\]
+\end{uwaga}
+
+\begin{fakt}
+\label{fakt:zlozenie-zmiennej-losowej}
+Jeżeli $X\colon\Omega\to\R^d$ jest wektorem losowym, a funkcja
+$\varphi\colon\R^d\to\R^m$ jest borelowska, to
+\[
+  \varphi(X)=\varphi\circ X\colon\Omega\to\R^m
+\]
+jest wektorem losowym (dla $m=1$ --- zmienną losową rzeczywistą).
+\end{fakt}
+
+\begin{uwaga}
+Funkcja $\varphi\colon\R^d\to\R^m$ jest \emph{borelowska}, jeżeli
+\[
+  \varphi^{-1}(A)\in\B(\R^d)
+  \qquad\text{dla każdego }A\in\B(\R^m).
+\]
+\end{uwaga}
+
+\section{\texorpdfstring{$\sigma$}{sigma}-ciało generowane przez zmienną losową}
+\label{sec:sigma-zmiennej-losowej}
+
+\begin{definicja}
+\label{def:sigma-zmiennej-losowej}
+Niech $X\colon\Omega\to\R$ będzie zmienną losową.
+Najmniejsze $\sigma$-ciało $\mathcal G\subseteq\F$, względem którego
+$X$ jest mierzalna, nazywamy \emph{$\sigma$-ciałem generowanym przez $X$}
+i oznaczamy przez $\sigma(X)$.
+\end{definicja}
+
+\begin{fakt}
+\label{fakt:postac-sigma-x}
+Dla zmiennej losowej $X\colon\Omega\to\R$ mamy
+\[
+  \sigma(X)=\{X^{-1}(B):B\in\B(\R)\}.
+\]
+\end{fakt}
+
+\begin{przyklad}[Zmienna przyjmująca dwie wartości]
+\label{przykl:sigma-dwie-wartosci}
+Niech $A\in\F$ oraz $a,b\in\R$, $a\ne b$. Rozważmy zmienną losową
+\[
+  X(\omega)=a\mathbf{1}_A(\omega)+b\mathbf{1}_{A^c}(\omega),
+  \qquad\omega\in\Omega,
+\]
+gdzie $\mathbf{1}_A$ jest funkcją wskaźnikową zbioru $A$.
+Dla $B\in\B(\R)$ otrzymujemy
+\[
+  X^{-1}(B)=
+  \begin{cases}
+    \varnothing,&a\notin B,\ b\notin B,\\
+    A,&a\in B,\ b\notin B,\\
+    A^c,&a\notin B,\ b\in B,\\
+    \Omega,&a\in B,\ b\in B.
+  \end{cases}
+\]
+Zatem
+\[
+  \sigma(X)=\{\varnothing,A,A^c,\Omega\}.
+\]
+\end{przyklad}
+
+\section{Niezależność zmiennych losowych}
+\label{sec:niezaleznosc-zmiennych-losowych}
+
+\begin{definicja}
+\label{def:niezaleznosc-zmiennych-losowych}
+Zmienne losowe $X,Y\colon\Omega\to\R$ są \emph{niezależne}, jeżeli
+dla każdych $A,B\in\B(\R)$ zachodzi
+\[
+  \PP(X\in A,\,Y\in B)=\PP(X\in A)\PP(Y\in B).
+\]
+Równoważnie: $\sigma$-ciała $\sigma(X)$ i $\sigma(Y)$ są niezależne.
+\end{definicja}
+
+\begin{definicja}
+\label{def:niezaleznosc-rodziny-zmiennych}
+Zmienne losowe $X_1,\ldots,X_n$ są \emph{niezależne}, jeżeli
+$\sigma$-ciała $\sigma(X_1)$, $\ldots$, $\sigma(X_n)$ są niezależne.
+Ogólniej, dla dowolnego zbioru indeksów $T$ rodzina zmiennych losowych
+$(X_t)_{t\in T}$ jest \emph{niezależna}, jeżeli rodzina
+$\bigl(\sigma(X_t)\bigr)_{t\in T}$ jest niezależna.
+\end{definicja}
+
+\begin{przyklad}[Niezależne funkcje wskaźnikowe]
+\label{przykl:niezalezne-wskaznikowe}
+Rozważmy przestrzeń probabilistyczną
+\[
+  (\Omega,\F,\PP)=\bigl([0,1],\B([0,1]),\lambda\bigr),
+\]
+gdzie $\lambda$ oznacza miarę Lebesgue'a na odcinku $[0,1]$.
+Niech
+\[
+  A=\left[0,\frac12\right),
+  \qquad
+  B=\left[0,\frac14\right)\cup\left[\frac12,\frac34\right),
+  \qquad X=\mathbf{1}_A,\quad Y=\mathbf{1}_B.
+\]
+Wówczas
+\[
+  \sigma(X)=\{\varnothing,A,A^c,\Omega\},
+  \qquad
+  \sigma(Y)=\{\varnothing,B,B^c,\Omega\}.
+\]
+Ponadto
+\[
+  \PP(A\cap B)
+    =\lambda\!\left(\left[0,\frac14\right)\right)
+    =\frac14=\frac12\cdot\frac12=\PP(A)\PP(B).
+\]
+Zdarzenia $A,B$ są niezależne, a z własności niezależności
+(fakt~\ref{fakt:wlasnosci-niezaleznosci}) to samo dotyczy ich dopełnień.
+Zatem $\sigma$-ciała $\sigma(X)$ i $\sigma(Y)$ są niezależne,
+czyli zmienne losowe $X,Y$ są niezależne.
+\end{przyklad}
+
+\begin{przyklad}[Funkcje Rademachera]
+\label{przykl:rademacher}
+Na tej samej przestrzeni probabilistycznej funkcje
+\[
+  X_n(x)=\operatorname{sgn}\!\bigl(\sin(2^n\pi x)\bigr),
+  \qquad x\in[0,1],\quad n=1,2,\ldots,
+\]
+tworzą rodzinę niezależnych zmiennych losowych.
+Zera sinusów występują w punktach dyadycznych, w tym na końcach odcinka;
+zbiór tych punktów ma miarę zero, więc wartości funkcji w tych punktach
+nie wpływają na niezależność.
+\end{przyklad}
+
+\begin{fakt}
+\label{fakt:zmienna-niezalezna-od-siebie}
+Zmienna losowa $X\colon\Omega\to\R$ jest niezależna od samej siebie
+wtedy i tylko wtedy, gdy istnieje $c\in\R$ takie, że
+\[
+  \PP(X=c)=1.
+\]
+\end{fakt}
+
+\section{Układy \texorpdfstring{$\pi$ i $\lambda$}{pi i lambda}}
+\label{sec:pi-lambda}
+
+\begin{definicja}
+\label{def:pi-uklad}
+Rodzinę zbiorów $\mathcal P\subseteq2^\Omega$ nazywamy
+\emph{$\pi$-układem}, jeżeli
+\[
+  A\cap B\in\mathcal P
+  \qquad\text{dla wszystkich }A,B\in\mathcal P.
+\]
+\end{definicja}
+
+\begin{przyklad}
+Rodzina
+\[
+  \mathcal P=\{[a,b):a,b\in\R\}
+\]
+jest $\pi$-układem na $\R$. Przyjmujemy przy tym $[a,b)=\varnothing$
+dla $a\geq b$.
+\end{przyklad}
+
+\begin{definicja}
+\label{def:lambda-uklad}
+Rodzinę zbiorów $\mathcal L\subseteq2^\Omega$ nazywamy
+\emph{$\lambda$-układem}, jeżeli spełnia następujące warunki:
+\begin{enumerate}
+  \item $\Omega\in\mathcal L$.
+  \item Jeżeli $A,B\in\mathcal L$ i $A\subseteq B$, to
+    $B\setminus A\in\mathcal L$.
+  \item Jeżeli $A_1,A_2,\ldots\in\mathcal L$ oraz
+    $A_n\subseteq A_{n+1}$ dla każdego $n\geq1$, to
+    \[
+      \bigcup_{n=1}^{\infty}A_n\in\mathcal L.
+    \]
+\end{enumerate}
+\end{definicja}
+
+\begin{fakt}
+\label{fakt:pi-lambda-sigma}
+Jeżeli rodzina $\F$ jest jednocześnie $\pi$-układem i $\lambda$-układem,
+to jest $\sigma$-ciałem.
+\end{fakt}
+
+\begin{twierdzenie}[O układach $\pi$ i $\lambda$]
+\label{tw:pi-lambda}
+Jeżeli $\lambda$-układ $\mathcal L$ zawiera $\pi$-układ $\mathcal P$,
+to
+\[
+  \sigma(\mathcal P)\subseteq\mathcal L.
+\]
+\end{twierdzenie}
+
+\subsection{Sposób stosowania twierdzenia}
+\label{subsec:stosowanie-pi-lambda}
+
+Chcąc udowodnić pewną własność $(\ast)$ dla każdego $A\in\F$,
+możemy postępować następująco:
+\begin{enumerate}
+  \item Znajdujemy $\pi$-układ $\mathcal P$ taki, że
+    $\sigma(\mathcal P)=\F$, i sprawdzamy własność $(\ast)$
+    dla każdego zbioru z $\mathcal P$.
+  \item Definiujemy rodzinę
+    \[
+      \mathcal L=\{A\in\F:\text{własność }(\ast)\text{ zachodzi dla }A\}.
+    \]
+  \item Wykazujemy, że $\mathcal L$ jest $\lambda$-układem.
+  \item Ponieważ $\mathcal P\subseteq\mathcal L$, z
+    twierdzenia~\ref{tw:pi-lambda} otrzymujemy
+    \[
+      \F=\sigma(\mathcal P)\subseteq\mathcal L.
+    \]
+    Własność $(\ast)$ zachodzi więc dla każdego $A\in\F$.
+\end{enumerate}

@@ -99,23 +99,53 @@ Uwagi do transkrypcji:
   granicami przecięć skończonych; w drugiej części wykorzystuje się
   niezależność dopełnień i nierówność 1 + x <= exp(x).
 
-## 2026-10-25: okładka i format stron
+## Okładka i format stron
 
-Aktualna okładka jest wybranym przez użytkownika wariantem kreskówki 3D.
-Obraz `grafika/okladka-kreskowka-3d.png` zawiera cały plakat z postaciami,
-ozdobną typografią, trzema czarnymi i czterema białymi kulami oraz cyframi 6 i 7.
-Obaj krupierzy mają być bez zarostu i okularów, z włosami na bok oraz
-spojrzeniem skierowanym na widza. Prompt znajduje się w
-`grafika/okladka-kreskowka-3d-prompt.txt`, a skład A4 w `grafika/okladka.tex`.
+Aktualna okładka ma realistycznych, fikcyjnych krupierów bez podobieństwa
+do prowadzącego. Fotograficzną bazę plakatu wygenerowano wbudowanym imagegen
+do `grafika/okladka-realistyczna.png`; prompt jest w
+`grafika/okladka-realistyczna-prompt.txt`. LeBron jest osobną fotografią
+z przezroczystością: `grafika/lebron-glowa.png`, pochodzącą z wcześniej
+wyciętego zdjęcia dostarczonego przez użytkownika. Istniejące wycięcie
+ponownie wykorzystano bez generowania lub modyfikacji twarzy. Oba elementy
+łączy `grafika/okladka.tex` w kompletną okładkę `grafika/okladka.pdf`.
+Pod krupierem trzymającym 6 i 7 umieszczono nowy podpis użytkownika.
 
 Na drugiej stronie obu wariantów podano prowadzącego i autora; informacja
-o chronologii zależy od wariantu. Spis treści jest na trzeciej stronie.
+o chronologii zależy od wariantu. Spis treści zaczyna się na trzeciej stronie.
 Nagłówki są puste, a numery stron wyśrodkowane w stopce.
 
-Wcześniejsze okładki i fotografie referencyjne wycofano z publikowanych
-plików i historii. Kopie zachowano wyłącznie w lokalnym prywatnym archiwum
-wewnątrz metadanych Git. Niewybrane próby pozostają w ignorowanym katalogu
-`grafika/podglady-kreskowka/` i nie są publikowane.
+Dawne okładki z fotografią prowadzącego i ich materiały referencyjne pozostają
+wyłącznie w lokalnym archiwum metadanych Git. Nieaktywne obrazy nie są
+ponownie dodawane do bieżących plików projektu.
+
+## 2026-10-27: wykład 4
+
+| Plik w projekcie | Treść |
+| --- | --- |
+| `2026-10-27/IMG_7005.jpeg` | Przykład ORRO: wybór niezależnych rozłącznych bloków i zastosowanie lematu Borela--Cantellego. |
+| `2026-10-27/zmienna-losowa.png` | Definicja zmiennej losowej i wektora losowego, uwaga o mierzalności. |
+| `2026-10-27/IMG_7006.jpeg` | Warunek mierzalności przez półproste, zapis prawdopodobieństw i ogólna definicja funkcji mierzalnej. |
+| `2026-10-27/IMG_7007.jpeg` | Borelowskie funkcje wektora losowego i sigma-ciało generowane przez zmienną. |
+| `2026-10-27/IMG_7008.jpeg` | Postać sigma(X), przykład zmiennej o dwóch wartościach i jej przeciwobrazy. |
+| `2026-10-27/IMG_7009.jpeg` | Niezależność dwóch zmiennych i dowolnej rodziny zmiennych losowych. |
+| `2026-10-27/IMG_7010.jpeg` | Niezależne funkcje wskaźnikowe na [0,1] oraz rodzina funkcji Rademachera. |
+| `2026-10-27/IMG_7011.jpeg` | Niezależność zmiennej od samej siebie; pi-układy i początek definicji lambda-układu. |
+| `2026-10-27/IMG_7012.jpeg` | Dokończenie definicji lambda-układu i twierdzenie pi-lambda. |
+| `2026-10-27/IMG_7013.jpeg` | Schemat stosowania twierdzenia pi-lambda do własności zbiorów. |
+
+Uwagi do transkrypcji:
+
+- Wykład 4 zaczyna się przed przykładem ORRO, po dowodach lematu Borela--Cantellego.
+- Definicję z zeszytu umieszczono przed uwagami z IMG_7006, które już odwołują
+  się do zmiennej losowej. Dalej zachowano kolejność zdjęć tablicy.
+- Dla ORRO zachowano podciąg B_n = A_(4n), dzięki czemu bloki rzutów są rozłączne.
+- Przedziały odczytano jako A = [0,1/2) i B = [0,1/4) suma [1/2,3/4).
+- W przykładzie Rademachera doprecyzowano, że punkty dyadyczne tworzą zbiór
+  miary zero, więc wartości na zerach sinusów nie zmieniają niezależności.
+- Trzeci warunek definicji lambda-układu z IMG_7012 połączono z dwoma pierwszymi
+  warunkami z IMG_7011. Nie dopisywano nieobecnych na tablicy dowodów.
+- Zrzut definicji został dołączony w wiadomości dwukrotnie; zapisano jedną kopię.
 
 ## Granice wykładów
 
@@ -131,3 +161,6 @@ i obejmuje cały materiał o niezależności, schemacie Bernoulliego,
 granicach ciągów zdarzeń i lemacie Borela-Cantellego. Według nowszego
 wyjaśnienia użytkownika czerwona kreska może też oznaczać przerwę
 w notatkach; sama nie wystarcza do wyznaczenia początku wykładu.
+
+Wykład 4 obejmuje przykład ORRO oraz rozdział o zmiennych losowych,
+niezależności zmiennych i układach pi oraz lambda.

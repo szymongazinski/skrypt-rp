@@ -7,8 +7,8 @@ w katalogu przedmiotu, obok folderu `projekt/`. Ten sam układ obowiązuje
 lokalnie i w głównym katalogu repozytorium na GitHubie.
 
 Repozytorium: [skrypt-rp](https://github.com/szymongazinski/skrypt-rp).
-Publikowana wersja zawiera wyłącznie aktualną okładkę. Poprzednie ilustracje
-i fotografie referencyjne nie są częścią publikowanych plików ani historii.
+Bieżące pliki zawierają aktualną realistyczną okładkę. Dawne okładki
+z fotografią prowadzącego nie są częścią tego repozytorium ani jego historii.
 
 ## Układ projektu
 
@@ -69,6 +69,8 @@ wykład 2 zaczyna się przed dowodem własności 6 (ciąg rosnący),
 a stwierdzenia wszystkich siedmiu własności należą do wykładu 1.
 Wykład 3 zaczyna się od początku materiału o niezależności, przed definicją
 niezależności dwóch zdarzeń.
+Wykład 4 zaczyna się od przykładu z nieskończenie wieloma wystąpieniami ORRO,
+po lemacie Borela--Cantellego; dalej obejmuje zmienne losowe i układy pi oraz lambda.
 
 ## Formatowanie
 

@@ -321,3 +321,49 @@ Stąd granica iloczynu przy $N\to\infty$ wynosi zero, a więc
 \]
 To kończy dowód.
 \end{proof}
+
+% Źródło: materialy/2026-10-27/IMG_7005.jpeg.
+\poczatekwykladu{4}
+
+\begin{przyklad}[Nieskończenie wiele wystąpień układu ORRO]
+\label{przykl:orro}
+Rzucamy nieskończenie wiele razy uczciwą monetą, niezależnie w kolejnych
+próbach. Jakie jest prawdopodobieństwo, że układ ORRO, czyli orzeł,
+reszka, reszka, orzeł, wystąpi nieskończenie wiele razy?
+\end{przyklad}
+
+\noindent\emph{Rozwiązanie.}
+Niech
+\[
+  A_n=\{\text{układ ORRO występuje w rzutach }n,n+1,n+2,n+3\}.
+\]
+Wówczas
+\[
+  \PP(A_n)=\left(\frac12\right)^4=\frac1{16},
+  \qquad \sum_{n=1}^{\infty}\PP(A_n)=\infty.
+\]
+Nie możemy od razu zastosować drugiej części lematu
+Borela--Cantellego, ponieważ zdarzenia $A_n$ nie są niezależne:
+bloki kolejnych rzutów nakładają się. Wybierzmy zatem
+\[
+  B_n=A_{4n},\qquad n\geq1.
+\]
+Zdarzenia $B_n$ dotyczą rozłącznych bloków rzutów, więc są niezależne,
+a ponadto
+\[
+  \PP(B_n)=\frac1{16},
+  \qquad \sum_{n=1}^{\infty}\PP(B_n)=\infty.
+\]
+Z lematu~\ref{lem:borel-cantelli} otrzymujemy
+\[
+  \PP\!\left(\limsup_{n\to\infty}B_n\right)=1.
+\]
+Ponieważ
+\[
+  \limsup_{n\to\infty}B_n\subseteq\limsup_{n\to\infty}A_n,
+\]
+mamy również
+\[
+  \PP\!\left(\limsup_{n\to\infty}A_n\right)=1.
+\]
+Zatem układ ORRO występuje nieskończenie wiele razy z prawdopodobieństwem~$1$.

@@ -1,0 +1,22 @@
+NARZĘDZIE: wbudowane imagegen. Fotograficzna baza plakatu; wycięta głowa jest osobnym elementem składu LaTeX.
+
+Edit the supplied Polish probability-course cover. Convert the TWO illustrated croupiers to realistic photographic ADULT HUMAN CROUPIERS, while preserving the ornate casino poster design.
+
+Main croupier: original FICTIONAL anonymous adult man around 30, NOT a portrait of any actual person. Natural photographic skin, normal human facial proportions, clean-shaven, no glasses, short side-swept brown hair, a restrained friendly smile, coordinated normal eyes looking straight at camera. White dress shirt, black waistcoat and bow tie. Same leaning pose, arms straight and hands on roulette rim. Exactly one metallic gold UPPER CANINE, third tooth from middle; four front incisors white. No cartoon, no Pixar/3D-animation rendering.
+The smaller 6/7 croupier at bottom center becomes the SAME FICTIONAL ADULT MAN with a realistic photographic face and natural human hands. Keep the palm-up blue-grey blocks with white 6 on viewer-left and 7 on viewer-right.
+REMOVE THE SMALL CARTOON HEAD IN THE LOWER RIGHT COMPLETELY. Replace only that head area with the existing warm casino background, leaving clean empty space ABOVE the lower-right quote for a separate photograph that will be placed later in the book layout. Do not generate a replacement head or person there.
+
+Add a legible integrated ornate gold caption DIRECTLY BENEATH the small 6/7 croupier, at bottom center, EXACT text:
+"co ty tam odpierdalasz z tymi rękami?"
+It may be three short lines, "co ty tam" / "odpierdalasz" / "z tymi rękami?". Allow enough space by shifting the smaller man up slightly or adjusting bottom spacing. Keep the entire caption inside the page and not overlapping nearby text or the man's hands.
+
+PRESERVE ALL OTHER TEXT EXACTLY:
+"Nie ma czegoś takiego jak przegrany w kasynie, są tylko ludzie, którzy wyszli za wcześnie"
+"Rachunek" curved above roulette
+"prawdopodobieństwa" curved below roulette
+"ℙ(A) > 0"
+"gdzie A - szansa na zielone 100 razy pod rząd"
+"Znowu te cholerne kule!"
+"Po co ci syn, jak możesz obstawić pewniaczka i wygrać cały dom dziecka"
+
+Keep elaborate gold lettering and swashes, emerald opulent full-page casino background, warm chandeliers, roulette, and glass urn with EXACTLY THREE BLACK AND FOUR WHITE BALLS. The main titles remain dominant, curved and integrated with the wheel. Photographic realistic adults, not illustrations. A4 portrait, complete uncropped poster, no frames or square photo panels, no watermark, no extra words or characters.

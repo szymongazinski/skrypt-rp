@@ -17,27 +17,28 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
   numery stron wyśrodkowane na dole, nagłówki puste.
 - Pierwsza strona to wspólna graficzna okładka `grafika/okladka.pdf`,
   składana z pliku `grafika/okladka.tex` i kompletnego obrazu
-  `grafika/okladka-kreskowka-3d.png`. Pełny prompt aktywnego wariantu zapisuj
-  w `grafika/okladka-kreskowka-3d-prompt.txt`.
+  `grafika/okladka-realistyczna.png` oraz osobnej fotografii z przezroczystością
+  `grafika/lebron-glowa.png`. Pełny prompt bazy zapisuj
+  w `grafika/okladka-realistyczna-prompt.txt`.
   Na drugiej stronie podaj prowadzącego prof. Jacka Małeckiego oraz autora
   Szymona Gazińskiego i dopasuj informację o chronologii do wariantu PDF.
   Dopiero po obu tych stronach umieszczaj spis treści.
   Okładka ma typografię wpisaną w kasynowy plakat: wygięty „Rachunek” nad ruletką
   i „prawdopodobieństwa” pod nią. Nie dodawaj prostokątnych pól na napisy ani
-  osobnej fotograficznej wyciętej głowy. Użytkownik wybrał wariant 2, czyli
-  w całości kreskówkową okładkę w stylu 3D. Obaj jasnoskórzy krupierzy mają
-  być bez zarostu i okularów, z krótszą fryzurą ułożoną na bok i zmienioną
-  linią włosów; oczy mają patrzeć prosto na widza, bez zeza.
-  Zachowaj umiarkowany uśmiech wybrany przez użytkownika; nie zastępuj go
-  neutralnymi ustami ani sennymi, przymkniętymi oczami. Tęczówka oka po prawej
-  stronie obrazu ma być odsunięta od nosa i ustawiona we właściwym miejscu.
+  prostokątnych fotograficznych nakładek. Nowsze polecenie użytkownika zmienia
+  styl postaci na realistyczny: obaj krupierzy są dorosłymi fikcyjnymi osobami
+  o naturalnych proporcjach twarzy, bez podobieństwa do prowadzącego wykład.
+  Są bez zarostu i okularów, z krótkimi włosami ułożonymi na bok,
+  umiarkowanym uśmiechem i prawidłowo ustawionymi oczami patrzącymi na widza.
   Jedyny złoty ząb to górny kieł (trójka), a cztery przednie siekacze są białe.
-  Kreskówkowa
-  ciemnoskóra głowa w czapce pozostaje brodata i jest częścią całego obrazu.
+  LeBron jest fotograficzny: używaj istniejącego wycięcia RGBA z oryginalnego
+  zdjęcia użytkownika, umieszczonego w LaTeX bez prostokątnego tła.
+  Pod mniejszym krupierem z cyframi 6 i 7 ma być podpis
+  „co ty tam odpierdalasz z tymi rękami?”.
   Zachowuj trzy czarne i cztery białe kule oraz czytelne cyfry 6 i 7.
-  Starszych ilustracji, fotografii i masek głowy nie dodawaj do repozytorium
-  ani jego historii. Lokalna kopia tych materiałów jest poza publikowanymi
-  plikami, w prywatnym archiwum wewnątrz metadanych Git.
+  Nie przywracaj dawnych okładek ani fotografii prowadzącego. Aktualna
+  fotografia LeBrona została osobno wskazana przez użytkownika do okładki.
+  Nieaktywne ilustracje zachowuj lokalnie w prywatnym archiwum metadanych Git.
   Niewybrane podglądy pozostawiaj lokalnie
   w ignorowanym katalogu `grafika/podglady-kreskowka/`.
 - Nie umieszczaj w skrypcie informacji o dacie otrzymania materiałów.
@@ -55,6 +56,8 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
   (ciąg rosnący); wszystkie siedem stwierdzeń należą jeszcze do wykładu 1.
   Wykład 3 zaczyna się od początku notatek o niezależności, przed definicją
   niezależności dwóch zdarzeń. Kreska na zrzucie z tego wykładu oznacza przerwę.
+  Wykład 4 zaczyna się przed przykładem ORRO, po dowodach lematu
+  Borela--Cantellego. Następnie obejmuje zmienne losowe i układy pi oraz lambda.
 - Definicje, przykłady, twierdzenia, fakty, lematy, wnioski i uwagi mają osobne
   liczniki ciągłe przez cały rozdział, resetowane wyłącznie przy `\chapter`.
   Sekcje i podsekcje nie resetują liczników. Numer ma postać `rozdział.numer`,
