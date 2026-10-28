@@ -12,6 +12,7 @@ Polecenia Git wykonuj z folderu `projekt/` (lub przez `git -C projekt ...`).
 Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
 
 - Przepisuj dostarczone notatki i zdjęcia po polsku do odpowiednich rozdziałów.
+- Dla `1_A` stosuj nazwy „indykator zbioru A” lub „funkcja charakterystyczna zbioru A”.
 - Zachowuj PL Roman 12 pt, klasyczny skład oraz czarne, klikalne odnośniki.
 - Nie używaj żywej paginy z nazwami rozdziałów. Stosuj `\pagestyle{plain}`:
   numery stron wyśrodkowane na dole, nagłówki puste.

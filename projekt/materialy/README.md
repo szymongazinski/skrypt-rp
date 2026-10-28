@@ -129,7 +129,7 @@ ponownie dodawane do bieżących plików projektu.
 | `2026-10-27/IMG_7007.jpeg` | Borelowskie funkcje wektora losowego i sigma-ciało generowane przez zmienną. |
 | `2026-10-27/IMG_7008.jpeg` | Postać sigma(X), przykład zmiennej o dwóch wartościach i jej przeciwobrazy. |
 | `2026-10-27/IMG_7009.jpeg` | Niezależność dwóch zmiennych i dowolnej rodziny zmiennych losowych. |
-| `2026-10-27/IMG_7010.jpeg` | Niezależne funkcje wskaźnikowe na [0,1] oraz rodzina funkcji Rademachera. |
+| `2026-10-27/IMG_7010.jpeg` | Niezależne indykatory na [0,1] oraz rodzina funkcji Rademachera. |
 | `2026-10-27/IMG_7011.jpeg` | Niezależność zmiennej od samej siebie; pi-układy i początek definicji lambda-układu. |
 | `2026-10-27/IMG_7012.jpeg` | Dokończenie definicji lambda-układu i twierdzenie pi-lambda. |
 | `2026-10-27/IMG_7013.jpeg` | Schemat stosowania twierdzenia pi-lambda do własności zbiorów. |
