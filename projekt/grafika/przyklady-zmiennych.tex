@@ -1,0 +1,47 @@
+\documentclass[tikz,border=8pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[OT4,plmath]{polski}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}[x=2.7cm,y=1.9cm,>=stealth,font=\large]
+  \begin{scope}
+    \node at (.55,1.7) {a) $X(\omega)=c$};
+    \draw[->] (-.1,0)--(1.3,0) node[right] {$\omega$};
+    \draw[->] (0,-.2)--(0,1.4);
+    \draw[very thick] (0,1)--(1,1);
+    \fill (0,1) circle (2pt);
+    \fill (1,1) circle (2pt);
+    \node[left] at (0,1) {$c$};
+    \draw (1,.035)--(1,-.035) node[below] {$1$};
+    \node[below left] at (0,0) {$0$};
+  \end{scope}
+  \begin{scope}[xshift=4.8cm]
+    \node at (.55,1.7) {b) $Y=\mathbf{1}_{[0,\,2/3)}$};
+    \draw[->] (-.1,0)--(1.3,0) node[right] {$\omega$};
+    \draw[->] (0,-.2)--(0,1.4);
+    \draw[very thick] (0,1)--(2/3,1);
+    \draw[very thick] (2/3,0)--(1,0);
+    \draw[densely dotted] (2/3,0)--(2/3,1);
+    \fill (0,1) circle (2pt);
+    \draw[thick,fill=white] (2/3,1) circle (2pt);
+    \fill (2/3,0) circle (2pt);
+    \fill (1,0) circle (2pt);
+    \node[left] at (0,1) {$1$};
+    \node[below] at (2/3,-.035) {$\frac23$};
+    \node[below] at (1,-.035) {$1$};
+    \node[below left] at (0,0) {$0$};
+  \end{scope}
+  \begin{scope}[xshift=9.6cm]
+    \node at (.55,1.7) {c) $Z(\omega)=\omega$};
+    \draw[->] (-.1,0)--(1.3,0) node[right] {$\omega$};
+    \draw[->] (0,-.2)--(0,1.4);
+    \draw[very thick] (0,0)--(1,1);
+    \fill (0,0) circle (2pt);
+    \fill (1,1) circle (2pt);
+    \draw[densely dotted] (1,0)--(1,1)--(0,1);
+    \node[left] at (0,1) {$1$};
+    \draw (1,.035)--(1,-.035) node[below] {$1$};
+    \node[below left] at (0,0) {$0$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

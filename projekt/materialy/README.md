@@ -147,6 +147,51 @@ Uwagi do transkrypcji:
   warunkami z IMG_7011. Nie dopisywano nieobecnych na tablicy dowodów.
 - Zrzut definicji został dołączony w wiadomości dwukrotnie; zapisano jedną kopię.
 
+## 2026-10-29: wykład 5
+
+Oryginały z katalogu tymczasowego skopiowano bez zmian.
+
+| Plik w projekcie | Treść |
+| --- | --- |
+| `2026-10-29/IMG_7038.jpeg` | Twierdzenie o niezależności bloków zmiennych i ich funkcji borelowskich. |
+| `2026-10-29/IMG_7039.jpeg` | Uogólnienie na wiele bloków, przykłady i uwaga o funkcjach korzystających ze wspólnych zmiennych. |
+| `2026-10-29/IMG_7040.jpeg` | Początek szkicu dowodu: pi-układ prostokątów i wektory X oraz Y. |
+| `2026-10-29/IMG_7041.jpeg` | Pierwszy lambda-układ i faktoryzacja dla prostokątów. |
+| `2026-10-29/IMG_7042.jpeg` | Dwukrotne zastosowanie twierdzenia pi-lambda. |
+| `2026-10-29/IMG_7043.jpeg` | Niezależność funkcji borelowskich przez przeciwobrazy. |
+| `2026-10-29/IMG_7044.jpeg` | Definicja rozkładu prawdopodobieństwa i rozkładu zmiennej, schemat. |
+| `2026-10-29/IMG_7045.jpeg` | Zmienna stała, miara Diraca, indykator przedziału [0,2/3) i mieszanki miar Diraca. |
+| `2026-10-29/IMG_7046.jpeg` | Zmienna identycznościowa na [0,1] i liczba szóstek w n rzutach kostką. |
+| `2026-10-29/IMG_7047.jpeg` | Rozkład liczby szóstek jako suma miar Diraca; definicja rozkładu dyskretnego. |
+| `2026-10-29/IMG_7048.jpeg` | Rozkład skupiony na zbiorze, przeliczalność atomów i opis rozkładu dyskretnego przez masy punktowe. |
+| `2026-10-29/IMG_7049.jpeg` | Rozkład jednopunktowy, dwupunktowy i Bernoulliego B(n,p). |
+| `2026-10-29/IMG_7050.jpeg` | Rozkłady geometryczny i Poissona. |
+
+Uwagi do transkrypcji:
+
+- Wykład 5 zaczyna się przed twierdzeniem z IMG_7038. Zachowano kolejność
+  treści z tablic: twierdzenie, uogólnienie i przykłady, szkic dowodu,
+  a następnie rozdział o rozkładach.
+- W uogólnieniu na wiele bloków ujednolicono indeksy: 0 = n_0 < ... < n_k = n.
+  Funkcja f_i ma n_i - n_(i-1) argumentów.
+- Doprecyzowano, że twierdzenie stosuje się do oddzielnych bloków;
+  sama niezależność X_1 i X_2 nie zapewnia niezależności sumy i różnicy.
+- W szkicu dowodu zapisano dwa kolejne lambda-układy. Ich własności,
+  oznaczone na tablicy jako „do pokazania”, wynikają z addytywności
+  i ciągłości prawdopodobieństwa; zachowano charakter szkicu.
+- Przedział w indykatorze z IMG_7045 odczytano jako [0,2/3).
+  Odpowiada to widocznym masom 1/3 w zerze i 2/3 w jedynce.
+- Ujednolicono zapis miary Diraca w punkcie c do delta_c.
+  Na tablicy używano również zapisu z singletonem w indeksie.
+- W przykładzie zmiennej Z poprawiono tablicową literówkę P(X w A) na P(Z w A).
+- Zachowano wykładową nazwę „rozkład Bernoulliego B(n,p)” dla rozkładu
+  liczby sukcesów w n próbach, zgodnie z dotychczasowym schematem Bernoulliego.
+- Uwzględniono parametry brzegowe: p = 1 dla rozkładu geometrycznego
+  oraz lambda = 0 dla Poissona, a we wzorze dwumianowym konwencję 0^0 = 1.
+- Nie dopisywano dowodu przeliczalności S_X: na tablicy jest ćwiczeniem.
+- Prostokąt, schemat rozkładu i trzy wykresy odtworzono jako osobne
+  edytowalne źródła LaTeX w `grafika/`.
+
 ## Granice wykładów
 
 Wykład 1 obejmuje dotychczasowy materiał i stwierdzenia wszystkich siedmiu
@@ -164,3 +209,7 @@ w notatkach; sama nie wystarcza do wyznaczenia początku wykładu.
 
 Wykład 4 obejmuje przykład ORRO oraz rozdział o zmiennych losowych,
 niezależności zmiennych i układach pi oraz lambda.
+
+Wykład 5 zaczyna się od twierdzenia o funkcjach niezależnych bloków
+zmiennych losowych, po sposobie stosowania twierdzenia pi-lambda.
+Obejmuje też rozkłady zmiennych losowych, rozkłady dyskretne i ich przykłady.

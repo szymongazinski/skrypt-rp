@@ -59,6 +59,8 @@ Nie przenoś ponownie katalogu głównego repozytorium do folderu `projekt/`.
   niezależności dwóch zdarzeń. Kreska na zrzucie z tego wykładu oznacza przerwę.
   Wykład 4 zaczyna się przed przykładem ORRO, po dowodach lematu
   Borela--Cantellego. Następnie obejmuje zmienne losowe i układy pi oraz lambda.
+  Wykład 5 zaczyna się przed twierdzeniem o funkcjach niezależnych bloków
+  zmiennych losowych; dalej obejmuje rozkłady zmiennych losowych i rozkłady dyskretne.
 - Definicje, przykłady, twierdzenia, fakty, lematy, wnioski i uwagi mają osobne
   liczniki ciągłe przez cały rozdział, resetowane wyłącznie przy `\chapter`.
   Sekcje i podsekcje nie resetują liczników. Numer ma postać `rozdział.numer`,

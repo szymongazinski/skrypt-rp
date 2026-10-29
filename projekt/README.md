@@ -71,6 +71,9 @@ Wykład 3 zaczyna się od początku materiału o niezależności, przed definicj
 niezależności dwóch zdarzeń.
 Wykład 4 zaczyna się od przykładu z nieskończenie wieloma wystąpieniami ORRO,
 po lemacie Borela--Cantellego; dalej obejmuje zmienne losowe i układy pi oraz lambda.
+Wykład 5 zaczyna się od twierdzenia o funkcjach niezależnych bloków zmiennych
+losowych i jego dowodu. Następnie obejmuje rozkłady zmiennych losowych
+oraz przykłady rozkładów dyskretnych.
 
 ## Formatowanie
 
